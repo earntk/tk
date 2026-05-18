@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ultimate Bulk Email Extractor | Fast & Free Online Email Finder</title>
+    <meta name="description" content="Extract emails from any text or content instantly with our premium Bulk Email Extractor. Free, fast, and secure online tool for digital marketers and lead generation experts.">
+    <meta name="keywords" content="bulk email extractor, email finder, extract email from text, online email scraper, free lead generation tool, email list builder, free email extractor">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Premium Web Tools">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Ultimate Bulk Email Extractor | Fast & Free Online Email Finder">
+    <meta property="og:description" content="Extract emails from any text instantly with our premium Bulk Email Extractor. Free, fast, and secure online tool for lead generation.">
+    <meta property="og:image" content="https://yourdomain.com/assets/og-image.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Ultimate Bulk Email Extractor | Online Email Finder">
+    <meta property="twitter:description" content="Extract emails from any text instantly with our premium Bulk Email Extractor. Free, fast, and secure online tool.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Premium CSS Reset & Variables */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --accent-primary: #6366f1;
+            --accent-hover: #4f46e5;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Header Navigation */
+        header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            flex-grow: 1;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .hero-section p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Extractor Interface Card */
+        .extractor-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 250px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1rem;
+            color: #fff;
+            font-size: 1rem;
+            resize: none;
+            transition: all 0.3s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Action Buttons */
+        .btn-container {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            background: var(--accent-primary);
+            color: white;
+            border: none;
+            padding: 0.85rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Counters & Session Stats styling */
+        .stats-bar {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            background: rgba(15, 23, 42, 0.4);
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .stat-item span {
+            font-weight: 700;
+            color: #a5b4fc;
+        }
+
+        .counter-badge {
+            background: rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        /* Loading / Processing Indicator */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .loading-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--accent-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-bolt"></i> Extractify Pro
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero-section">
+            <h1>Premium Bulk Email Extractor</h1>
+            <p>Paste your raw text or code below to extract clean, unique email lists instantly.</p>
+        </section>
+
+        <main class="extractor-card">
+            <div class="stats-bar">
+                <div class="stat-item">Total Session Emails Accumulated: <span id="sessionTotal">0</span>/10</div>
+                <div class="stat-item" style="font-size: 0.85rem; color: var(--text-muted);">
+                    <i class="fa-solid fa-circle-check" style="color: #34d399;"></i> Daily Ad Limit: 1/day max
+                </div>
+            </div>
+
+            <div class="grid-layout">
+                <div class="input-group">
+                    <label for="inputText">Paste Raw Text Here</label>
+                    <textarea id="inputText" placeholder="Paste your text, HTML, or data containing emails here..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <div style="display: flex; align-items: center;">
+                        <label for="outputText">Extracted This Time</label>
+                        <span class="counter-badge" id="emailCount">0 Emails</span>
+                    </div>
+                    <textarea id="outputText" placeholder="Emails from current text will appear here..." readonly></textarea>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn" onclick="extractEmails()">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Extract Emails
+                </button>
+                <button class="btn btn-secondary" onclick="copyToClipboard()">
+                    <i class="fa-solid fa-copy"></i> Copy List
+                </button>
+                <button class="btn btn-secondary" onclick="clearAll()" style="background: rgba(239, 68, 68, 0.1); color: #f87171;">
+                    <i class="fa-solid fa-trash"></i> Clear Box
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Extractify Pro. All rights reserved. Optimized for premium digital marketing list building.</p>
+    </footer>
+
+    <script>
+        // Global Array to track ALL unique emails found during this browser session
+        let sessionEmails = JSON.parse(localStorage.getItem('extractor_session_list')) || [];
+
+        // Update the top counter badge on page load
+        document.getElementById('sessionTotal').innerText = sessionEmails.length;
+
+        function extractEmails() {
+            const rawText = document.getElementById('inputText').value;
+            const outputTextArea = document.getElementById('outputText');
+            const counterBadge = document.getElementById('emailCount');
+            const sessionTotalDisplay = document.getElementById('sessionTotal');
+            
+            // Regex logic to match standard email structures
+            const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
+            const foundEmails = rawText.match(emailRegex);
+            
+            if (!foundEmails) {
+                outputTextArea.value = "";
+                counterBadge.innerText = "0 Emails";
+                alert("No emails found in the text provided.");
+                return;
+            }
+            
+            // Filter unique emails found in the current text block
+            const uniqueCurrentEmails = [...new Set(foundEmails)];
+            const currentCount = uniqueCurrentEmails.length;
+            
+            // Update UI for the current text box
+            counterBadge.innerText = `${currentCount} ${currentCount === 1 ? 'Email' : 'Emails'}`;
+            outputTextArea.value = uniqueCurrentEmails.join('\n');
+            
+            // Save to cumulative Session list (Avoiding absolute duplicates across multiple parses)
+            let dynamicAdded = false;
+            uniqueCurrentEmails.forEach(email => {
+                if (!sessionEmails.includes(email.toLowerCase())) {
+                    sessionEmails.push(email.toLowerCase());
+                    dynamicAdded = true;
+                }
+            });
+
+            if (dynamicAdded) {
+                localStorage.setItem('extractor_session_list', JSON.stringify(sessionEmails));
+            }
+
+            // Update session counter UI
+            const totalAccumulated = sessionEmails.length;
+            sessionTotalDisplay.innerText = totalAccumulated;
+            
+            // Check logic for 10 emails + Frequency Cap (1 ad per 24 hours)
+            if (totalAccumulated >= 10) {
+                const lastAdShown = localStorage.getItem('last_ad_timestamp');
+                const currentTime = new Date().getTime();
+                const twentyFourHours = 24 * 60 * 60 * 1000; // 24 hours in ms
+
+                // If ad has never been shown, OR 24 hours have passed since last view
+                if (!lastAdShown || (currentTime - lastAdShown > twentyFourHours)) {
+                    
+                    const targetUrl = "https://omg10.com/4/11019613";
+                    const loader = document.getElementById('loadingOverlay');
+                    
+                    loader.classList.add('active');
+                    
+                    setTimeout(() => {
+                        loader.classList.remove('active');
+                        
+                        // Save timestamp immediately before opening to guarantee absolute frequency policy compliance
+                        localStorage.setItem('last_ad_timestamp', currentTime);
+                        
+                        try {
+                            const newWindow = window.open(targetUrl, '_blank');
+                            if (newWindow) {
+                                newWindow.focus();
+                            } else {
+                                window.location.href = targetUrl;
+                            }
+                        } catch (e) {
+                            window.location.href = targetUrl;
+                        }
+                    }, 800);
+                } else {
+                    console.log("Monetag Policy Enforcement: Ad frequency cap active. Limit: 1 per day.");
+                }
+            }
+        }
+
+        function copyToClipboard() {
+            const outputTextArea = document.getElementById('outputText');
+            if (!outputTextArea.value) {
+                alert("Nothing to copy yet!");
+                return;
+            }
+            outputTextArea.select();
+            document.execCommand('copy');
+            alert("Current list copied successfully!");
+        }
+
+        function clearAll() {
+            document.getElementById('inputText').value = "";
+            document.getElementById('outputText').value = "";
+            document.getElementById('emailCount').innerText = "0 Emails";
+        }
+    </script>
+</body>
+</html>
